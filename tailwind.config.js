@@ -4,7 +4,11 @@ module.exports = {
     './resources/css/**/*.css',
   ],
   theme: {
-    extend: {}
+    extend: {
+      colors: {
+        'custom-bg': '#EDEDE9',
+      }
+    }
   },
   variants: {},
   plugins: [
