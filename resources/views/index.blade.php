@@ -4,7 +4,7 @@
     <div class="background-image grid grid-cols-1 m-auto" style="background-image: url('{{ asset('images/cinema-background.jpg') }}');">
         <div class="flex text-gray-100 pt-10">
             <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5 block text-center">
-                <h1 class="sm:text-orange-1 text-5xl uppercase font-bold text-shadow-md pb-14">
+                <h1 class="sm:text-white text-5xl uppercase font-bold text-shadow-md pb-14">
                     Lights, Camera, Action!
                 </h1>
                 <h1 class="sm:text-white text-5xl uppercase font-bold text-shadow-md pb-14">
@@ -12,7 +12,7 @@
                 </h1>
                 <a 
                     href="/blog"
-                    class="text-center bg-gray-50 text-black py-2 px-8 font-bold text-xl uppercase hover:bg-orange-1 hover:text-black rounded-lg">
+                    class="text-center bg-gray-50 text-black py-2 px-8 font-bold text-xl uppercase hover:bg-orange-400 hover:text-black rounded-lg">
                     Read More
                 </a>
             </div>
@@ -22,25 +22,31 @@
     <div class="w-4/5 mx-auto py-15 border-b border-gray-200">
         <div class="sm:grid grid-cols-2 gap-20 mb-10">
             <div class="m-auto sm:m-auto text-left w-4/5 block">
-                <h2 class="text-3xl font-extrabold text-gray-600">
-                    Movie Title 1
+                <h2 class="text-4xl font-extrabold text-black">
+                    <strong>Movies You Must Watch at Least Once in Your Life</strong>
                 </h2>
                 <p class="py-8 text-gray-500 text-s">
-                    A brief description of the first movie. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    <em>Description:</em> Some films are a must-watch for everyone. These are the movies that left a mark on history.
+                </p>
+                <p class="py-8 text-gray-500 text-s">
+                    <strong>Answer:</strong> We have compiled a list of iconic films that will broaden your cinematic horizons and leave a lasting impression.
                 </p>
             </div>
             <div>
-                <img src="{{ asset('images/movie1.jpg') }}" width="700" alt="Movie 1">
+                <img src="{{ asset('images/films1.jpg') }}" width="700" alt="Movie 1">
             </div>
         </div>
 
         <div class="sm:grid grid-cols-2 gap-20 mb-10">
             <div class="m-auto sm:m-auto text-left w-4/5 block">
                 <h2 class="text-3xl font-extrabold text-gray-600">
-                    Movie Title 2
+                    <strong>Oscar-Winning Films That Quickly Faded into Obscurity</strong>
                 </h2>
                 <p class="py-8 text-gray-500 text-s">
-                    A brief description of the second movie. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    <em>Description:</em> Some movies win the most prestigious award in cinema but are soon forgotten by audiences.
+                </p>
+                <p class="py-8 text-gray-500 text-s">
+                    <strong>Answer:</strong> We analyze which Oscar-winning films failed to stand the test of time.
                 </p>
             </div>
             <div>
@@ -51,14 +57,51 @@
         <div class="sm:grid grid-cols-2 gap-20 mb-10">
             <div class="m-auto sm:m-auto text-left w-4/5 block">
                 <h2 class="text-3xl font-extrabold text-gray-600">
-                    Movie Title 3
+                    <strong>Movies That Divided Audiences and Critics</strong>
                 </h2>
                 <p class="py-8 text-gray-500 text-s">
-                    A brief description of the third movie. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    <em>Description:</em> Sometimes, the public and critics have vastly different opinions on a film.
+                </p>
+                <p class="py-8 text-gray-500 text-s">
+                    <strong>Answer:</strong> We recall the most controversial movies that sparked heated debates.
                 </p>
             </div>
             <div>
                 <img src="{{ asset('images/movie3.jpg') }}" width="700" alt="Movie 3">
+            </div>
+        </div>
+
+        <div class="sm:grid grid-cols-2 gap-20 mb-10">
+            <div class="m-auto sm:m-auto text-left w-4/5 block">
+                <h2 class="text-3xl font-extrabold text-gray-600">
+                    <strong>Real Events That Inspired Great Films</strong>
+                </h2>
+                <p class="py-8 text-gray-500 text-s">
+                    <em>Description:</em> Sometimes, reality creates stories more fascinating than any screenwriter could imagine.
+                </p>
+                <p class="py-8 text-gray-500 text-s">
+                    <strong>Answer:</strong> We examine films based on true stories and how accurately they depict real events.
+                </p>
+            </div>
+            <div>
+                <img src="{{ asset('images/movie4.jpg') }}" width="700" alt="Movie 4">
+            </div>
+        </div>
+
+        <div class="sm:grid grid-cols-2 gap-20 mb-10">
+            <div class="m-auto sm:m-auto text-left w-4/5 block">
+                <h2 class="text-3xl font-extrabold text-gray-600">
+                    <strong>Movies That Will Make You Watch Them Twice</strong>
+                </h2>
+                <p class="py-8 text-gray-500 text-s">
+                    <em>Description:</em> Some films are filled with hidden details that only become apparent on a second viewing.
+                </p>
+                <p class="py-8 text-gray-500 text-s">
+                    <strong>Answer:</strong> We revisit films where every scene can change the way you perceive the story.
+                </p>
+            </div>
+            <div>
+                <img src="{{ asset('images/movie5.jpg') }}" width="700" alt="Movie 5">
             </div>
         </div>
 
