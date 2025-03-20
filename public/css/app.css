@@ -3251,8 +3251,8 @@ video {
 
 .bg-light-black {
   --bg-opacity: 1;
-  background-color: #252422;
-  background-color: rgba(37, 36, 34, var(--bg-opacity));
+  background-color: #0e0e0e;
+  background-color: rgba(14, 14, 14, var(--bg-opacity));
 }
 
 .bg-white {
@@ -3469,6 +3469,12 @@ video {
   --bg-opacity: 1;
   background-color: #fdba8c;
   background-color: rgba(253, 186, 140, var(--bg-opacity));
+}
+
+.bg-orange-1 {
+  --bg-opacity: 1;
+  background-color: #ffbd59;
+  background-color: rgba(255, 189, 89, var(--bg-opacity));
 }
 
 .bg-orange-400 {
@@ -4145,6 +4151,12 @@ video {
   --bg-opacity: 1;
   background-color: #fdba8c;
   background-color: rgba(253, 186, 140, var(--bg-opacity));
+}
+
+.group:hover .group-hover\:bg-orange-1 {
+  --bg-opacity: 1;
+  background-color: #c48d3b;
+  background-color: rgba(196, 141, 59, var(--bg-opacity));
 }
 
 .group:hover .group-hover\:bg-orange-400 {
@@ -5497,6 +5509,12 @@ video {
   --bg-opacity: 1;
   background-color: #fdba8c;
   background-color: rgba(253, 186, 140, var(--bg-opacity));
+}
+
+.hover\:bg-orange-1:hover {
+  --bg-opacity: 1;
+  background-color: #c48d3b;
+  background-color: rgba(196, 141, 59, var(--bg-opacity));
 }
 
 .hover\:bg-orange-400:hover {
@@ -29046,6 +29064,12 @@ video {
   color: rgba(255, 248, 241, var(--text-opacity));
 }
 
+.text-orange-1 {
+  --text-opacity: 1;
+  color: #ffbd59;
+  color: rgba(255, 189, 89, var(--text-opacity));
+}
+
 .text-orange-100 {
   --text-opacity: 1;
   color: #feecdc;
@@ -40490,14 +40514,30 @@ video {
   animation: bounce 1s infinite;
 }
 
-.background-image 
-{
-  background-image: url('https://cdn.pixabay.com/photo/2017/07/31/23/45/pen-2562078_960_720.jpg');
+.background-image {
+  background-image: url('https://img.freepik.com/free-photo/arrangement-cinema-objects-close-up_23-2148457829.jpg?t=st=1742422307~exp=1742425907~hmac=2841bdfa11a9b208b119e170cd94dafc53c9d6a05d43497fbf46d4440bf88946&w=2000');
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   height: 600px;
+  position: relative;
+}
+
+.background-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); 
+  z-index: 1;
+}
+
+.background-image > * {
+  position: relative;
+  z-index: 2;
 }
 
 h2{
@@ -68723,6 +68763,12 @@ h2{
     --text-opacity: 1;
     color: #fff8f1;
     color: rgba(255, 248, 241, var(--text-opacity));
+  }
+
+  .sm\:text-orange-1 {
+    --text-opacity: 1;
+    color: #ffbd59;
+    color: rgba(255, 189, 89, var(--text-opacity));
   }
 
   .sm\:text-orange-100 {

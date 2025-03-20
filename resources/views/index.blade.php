@@ -1,39 +1,68 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="background-image grid grid-cols-1 m-auto">
+    <div class="background-image grid grid-cols-1 m-auto" style="background-image: url('{{ asset('images/cinema-background.jpg') }}');">
         <div class="flex text-gray-100 pt-10">
             <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5 block text-center">
+                <h1 class="sm:text-orange-1 text-5xl uppercase font-bold text-shadow-md pb-14">
+                    Lights, Camera, Action!
+                </h1>
                 <h1 class="sm:text-white text-5xl uppercase font-bold text-shadow-md pb-14">
-                    Do you want to become a developer?
+                    Your Movie Adventure Starts Here
                 </h1>
                 <a 
                     href="/blog"
-                    class="text-center bg-gray-50 text-gray-700 py-2 px-4 font-bold text-xl uppercase">
+                    class="text-center bg-gray-50 text-black py-2 px-8 font-bold text-xl uppercase hover:bg-orange-1 hover:text-black rounded-lg">
                     Read More
                 </a>
             </div>
         </div>
     </div>
 
-    <div class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200">
-        <div>
-            <img src="https://cdn.pixabay.com/photo/2014/05/03/01/03/laptop-336704_960_720.jpg" width="700" alt="">
+    <div class="w-4/5 mx-auto py-15 border-b border-gray-200">
+        <div class="sm:grid grid-cols-2 gap-20 mb-10">
+            <div class="m-auto sm:m-auto text-left w-4/5 block">
+                <h2 class="text-3xl font-extrabold text-gray-600">
+                    Movie Title 1
+                </h2>
+                <p class="py-8 text-gray-500 text-s">
+                    A brief description of the first movie. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+            </div>
+            <div>
+                <img src="{{ asset('images/movie1.jpg') }}" width="700" alt="Movie 1">
+            </div>
         </div>
 
-        <div class="m-auto sm:m-auto text-left w-4/5 block">
-            <h2 class="text-3xl font-extrabold text-gray-600">
-                Struggling to be a better web developer?
-            </h2>
-            
-            <p class="py-8 text-gray-500 text-s">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus.
-            </p>
+        <div class="sm:grid grid-cols-2 gap-20 mb-10">
+            <div class="m-auto sm:m-auto text-left w-4/5 block">
+                <h2 class="text-3xl font-extrabold text-gray-600">
+                    Movie Title 2
+                </h2>
+                <p class="py-8 text-gray-500 text-s">
+                    A brief description of the second movie. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+            </div>
+            <div>
+                <img src="{{ asset('images/movie2.jpg') }}" width="700" alt="Movie 2">
+            </div>
+        </div>
 
-            <p class="font-extrabold text-gray-600 text-s pb-9">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente magnam vero nostrum! Perferendis eos molestias porro vero. Vel alias.
-            </p>
+        <div class="sm:grid grid-cols-2 gap-20 mb-10">
+            <div class="m-auto sm:m-auto text-left w-4/5 block">
+                <h2 class="text-3xl font-extrabold text-gray-600">
+                    Movie Title 3
+                </h2>
+                <p class="py-8 text-gray-500 text-s">
+                    A brief description of the third movie. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+            </div>
+            <div>
+                <img src="{{ asset('images/movie3.jpg') }}" width="700" alt="Movie 3">
+            </div>
+        </div>
 
+        <div class="text-center mt-10">
             <a 
                 href="/blog"
                 class="uppercase bg-blue-500 text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl">
@@ -94,7 +123,7 @@
             </div>
         </div>
         <div>
-            <img src="https://cdn.pixabay.com/photo/2014/05/03/01/03/laptop-336704_960_720.jpg" alt="">
+            <img src="{{ asset('images/new-image.jpg') }}" alt="">
         </div>
     </div>
 @endsection

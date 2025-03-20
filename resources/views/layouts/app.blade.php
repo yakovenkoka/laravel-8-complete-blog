@@ -14,16 +14,6 @@
     
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-    <style>
-        .nav-link {
-            font-weight: bold;
-        }
-        .nav-link:hover {
-            transform: scale(1.1);
-            color: #ff8800;
-            text-decoration: none;
-        }
-    </style>
 </head>
 <body class="bg-custom-bg h-screen antialiased leading-none font-sans">
     <div id="app">
@@ -34,19 +24,21 @@
                         FilmWords
                     </a>
                 </div>
-                <nav class="space-x-12 text-gray-300 text-sm sm:text-base">
-                    <a class="no-underline text-lg nav-link" href="/">Home</a>
-                    <a class="no-underline text-lg nav-link" href="/blog">Blog</a>
+                <nav class="space-x-15 text-gray-300 text-sm sm:text-base">
+                    <a class="no-underline text-lg font-semibold hover:text-orange-400 hover:scale-105 transition-transform duration-300 {{ request()->is('/') ? 'text-orange-400' : '' }}" href="{{ url('/') }}">Home</a>
+                    <a class="no-underline text-lg font-semibold hover:text-orange-400 hover:scale-105 transition-transform duration-300 {{ request()->is('blog') ? 'text-orange-400' : '' }}" href="{{ url('/blog') }}">Blog</a>
                     @guest
-                        <a class="no-underline text-lg nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        @if (Route::has('login'))
+                            <a class="no-underline text-lg font-semibold hover:text-orange-400 hover:scale-105 transition-transform duration-300 {{ request()->is('login') ? 'text-orange-400' : '' }}" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        @endif
                         @if (Route::has('register'))
-                            <a class="no-underline text-lg nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="no-underline text-lg font-semibold hover:text-orange-400 hover:scale-105 transition-transform duration-300 {{ request()->is('register') ? 'text-orange-400' : '' }}" href="{{ route('register') }}">{{ __('Register') }}</a>
                         @endif
                     @else
                         <span>{{ Auth::user()->name }}</span>
 
                         <a href="{{ route('logout') }}"
-                           class="no-underline text-lg nav-link"
+                           class="no-underline text-lg"
                            onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
