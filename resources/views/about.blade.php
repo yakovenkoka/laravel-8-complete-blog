@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="w-4/5 m-auto text-center pt-15 ">
+<div class="w-4/5 m-auto text-center pt-15 pb-10">
     <h1 class="text-5xl font-bold text-black pb-5">
         About Us
     </h1>
@@ -24,7 +24,7 @@
 <div class="w-4/5 m-auto py-10">
     <div class="sm:grid grid-cols-2 gap-10">
         <div>
-            <img src="{{ asset('images/about.jpg') }}" style="width: 100%; height: auto; object-fit: cover;" alt="About Us">
+            <img src="{{ asset('images/about.jpg') }}" style="width: 600px; height: 350px; object-fit: cover;" alt="About Us">
         </div>
         <div class="text-gray-800 text-lg leading-8 font-medium">
             <h2 class="text-3xl font-extrabold mb-4 text-orange-400" style="text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.786);">About Us</h2>
@@ -50,7 +50,7 @@
             </p>
         </div>
         <div>
-            <img src="{{ asset('images/mission.jpg') }}" style="width: 100%; height: auto; object-fit: cover;" alt="My Mission">
+            <img src="{{ asset('images/mission.jpg') }}" style="width: 600px; height: 350px; object-fit: cover;" alt="My Mission">
         </div>
     </div>
 </div>
