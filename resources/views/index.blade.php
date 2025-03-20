@@ -1,3 +1,4 @@
+<!-- filepath: /Users/karinayakovenko/VSCode/Server side/CA2/laravel-8-complete-blog/resources/views/index.blade.php -->
 @extends('layouts.app')
 
 @section('content')
@@ -33,7 +34,7 @@
                             </p>
                         </div>
                         <div>
-                            <img src="{{ asset('images/films1.jpeg') }}" width="600" alt="Movie 1">
+                            <img src="{{ asset('images/films3.jpg') }}" style="width: 500px; height: 300px; object-fit: cover;" alt="Movie 1">
                         </div>
                     </div>
                 </td>
@@ -50,45 +51,10 @@
                             </p>
                         </div>
                         <div>
-                            <img src="{{ asset('images/films2.jpg') }}" width="600" alt="Movie 2">
+                            <img src="{{ asset('images/films2.jpg') }}" style="width: 500px; height: 300px; object-fit: cover;" alt="Movie 1">
                         </div>
                     </div>
                 </td>
-            </tr>
-            <tr class="border border-white">
-                <td class="p-10">
-                    <div class="sm:grid grid-cols-2 gap-15 mb-7">
-                        <div class="m-auto sm:m-auto text-left w-4/5 block">
-                            <h2 class="pb-16 text-4xl font-black text-black">
-                                <strong>Movies That Divided Audiences and Critics</strong>
-                            </h2>
-                            <p class="pb-14 text-gray-900 text-xl">
-                                These films sparked debates, ignited controversies, and split audiences into passionate defenders and harsh critics. Some were hailed as masterpieces by critics but dismissed by viewers, while others won the hearts of audiences despite professional backlash. What makes them so polarizing?
-                            </p>
-                        </div>
-                        <div>
-                            <img src="{{ asset('images/films3.jpeg') }}" width="600" alt="Movie 2">
-                        </div>
-                    </div>
-                </td>
-            </tr>
-            <tr class="border border-white">
-                <td class="p-10">
-                    <div class="sm:grid grid-cols-2 gap-15 mb-7">
-                        <div class="m-auto sm:m-auto text-left w-4/5 block">
-                            <h2 class="pb-16 text-4xl font-black text-black">
-                                <strong>Real Events That Inspired Great Films</strong>
-                            </h2>
-                            <p class="pb-14 text-gray-900 text-xl">
-                                Sometimes, reality writes the most compelling scripts. Tragic fates, incredible triumphs, and shocking true events have inspired some of the most powerful films ever made. But how much of what we see on screen is true, and where does fiction take over?
-                            </p>
-                        </div>
-                        <div>
-                            <img src="{{ asset('images/films4.jpeg') }}" width="600" alt="Movie 2">
-                        </div>
-                    </div>
-                </td>
-            </tr>
             <tr class="border border-white">
                 <td class="p-10">
                     <div class="sm:grid grid-cols-2 gap-15 mb-7">
@@ -101,74 +67,96 @@
                             </p>
                         </div>
                         <div>
-                            <img src="{{ asset('images/films5.jpg') }}" width="600" alt="Movie 2">
+                            <img src="{{ asset('images/films6.jpg') }}" style="width: 500px; height: 300px; object-fit: cover;" alt="Movie 1">
                         </div>
                     </div>
                 </td>
             </tr>
         </table>
-        <div class="text-center mt-10">
-            <a 
-                href="/blog"
-                class="uppercase bg-light-black text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl">
-                Find Out More
-            </a>
-        </div>
-    </div>
-
-    <div class="text-center p-15 bg-black text-white">
-        <h2 class="text-2xl pb-5 text-l"> 
-            I'm an expert in...
-        </h2>
-
-        <span class="font-extrabold block text-4xl py-1">
-            Ux Design
-        </span>
-        <span class="font-extrabold block text-4xl py-1">
-            Project Management
-        </span>
-        <span class="font-extrabold block text-4xl py-1">
-            Digital Strategy
-        </span>
-        <span class="font-extrabold block text-4xl py-1">
-            Backend Development
-        </span>
-    </div>
-
-    <div class="text-center py-15">
-        <span class="uppercase text-s text-gray-400">
-            Blog
-        </span>
-
-        <h2 class="text-4xl font-bold py-10">
-            Recent Posts
-        </h2>
-
-        <p class="m-auto w-4/5 text-gray-500">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque exercitationem saepe enim veritatis, eos temporibus quaerat facere consectetur qui.
-        </p>
-    </div>
-
-    <div class="sm:grid grid-cols-2 w-4/5 m-auto">
-        <div class="flex bg-yellow-700 text-gray-100 pt-10">
-            <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5 block">
-                <span class="uppercase text-xs">
-                    PHP
-                </span>
-
-                <h3 class="text-xl font-bold py-10">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas necessitatibus dolorum error culpa laboriosam. Enim voluptas earum repudiandae consequuntur ad? Expedita labore aspernatur facilis quasi ex? Nemo hic placeat et?
-                </h3>
-
+        <div class="w-full border-t border-white my-10"></div>
+            <div class="text-center mt-10">
+                <p class="text-orange-500 pb-8 text-2xl font-bold">🍿  Flops That Became Cult Classics</p>
+                <p class="text-gray-900 text-xl mb-10">Some movies started as box office failures but later gained a devoted fanbase.</p>
+                <div class="w-full border-t border-white my-10"></div>
+                <p class="text-orange-500 pb-8 text-2xl font-bold">🎬  Movies Filmed in a Single Take</p>
+                <p class="text-gray-900 text-xl mb-10">Shooting a film in one continuous shot is a rare and risky approach. Here are the most impressive examples.</p>
+                <div class="w-full border-t border-white my-10"></div>
+                <p class="text-orange-500 pb-8 text-2xl font-bold">🎥  Where Were Iconic Movie Scenes Filmed?</p>
+                <p class="text-gray-900 text-xl mb-10">These locations became legendary in cinema history. Find out where they exist in real life.</p>
+                <div class="w-full border-t border-white my-10"></div>
                 <a 
-                    href=""
-                    class="uppercase bg-transparent border-2 border-gray-100 text-gray-100 text-xs font-extrabold py-3 px-5 rounded-3xl">
+                    href="/blog"
+                    class="border-2 border-black uppercase bg-light-black text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl hover:bg-gray-200 hover:text-black">
                     Find Out More
                 </a>
             </div>
         </div>
-        <div>
-            <img src="{{ asset('images/new-image.jpg') }}" alt="">
+    </div>
+    </div>
+
+    <div class="text-center p-15 bg-black text-white">
+        <h2 class="text-3xl pb-7 font-semibold text-orange-500"> 
+            Explore the World of Cinema
+        </h2>
+
+        <span class="font-extrabold block text-4xl py-2">
+            Film Reviews
+        </span>
+        <span class="font-extrabold block text-4xl py-2">
+            Movie Analysis
+        </span>
+        <span class="font-extrabold block text-4xl py-2">
+            Behind the Scenes
+        </span>
+        <span class="font-extrabold block text-4xl py-2">
+            Upcoming Releases
+        </span>
+    </div>
+
+    <div class="text-center py-15">
+        <span class="uppercase text-l text-gray-500">
+            Blog
+        </span>
+    
+        <h2 class="text-4xl font-extrabold pt-10 text-black">
+            Recent Posts
+        </h2>
+    
+        <div class="w-4/6 mx-auto pt-3 border-b border-gray-200">
+            <div class="w-full border-t border-white my-15"></div>
+            @foreach ($latestPosts as $index => $post)
+                <div class="sm:grid grid-cols-2 gap-10 mb-7">
+                    @if ($index % 2 == 0)
+                        <div class="m-auto sm:m-auto text-left w-5/6 block">
+                            <h3 class="text-3xl pb-8 font-bold">{{ $post->title }}</h3>
+                            <p class="text-gray-800 pb-6 text-lg">{{ Str::limit($post->description, 500, '...') }}</p>
+                            <a
+                            href="/blog/{{ $post->slug }}" 
+                            class="border-2 border-black uppercase bg-light-black text-gray-100 text-xs font-extrabold py-2 px-4 rounded-3xl hover:bg-gray-200 hover:text-black transition duration-300 ease-in-out">
+                            Read More
+                            </a>
+                        </div>
+                        <div class="flex content-center">
+                            <img src="{{ asset('images/' . $post->image_path) }}" style="height: auto; object-fit: contain;" alt="{{ $post->title }}">
+                        </div>
+                    @else
+                        <div>
+                            <img src="{{ asset('images/' . $post->image_path) }}" width="300" alt="{{ $post->title }}">
+                        </div>
+                        <div class="m-auto sm:m-auto text-left w-4/5 block">
+                            <h3 class="text-3xl pb-8 font-bold">{{ $post->title }}</h3>
+                            <p class="text-gray-800 pb-6 text-lg">{{ Str::limit($post->description, 500, '...') }}</p>
+                            <a
+                            href="/blog/{{ $post->slug }}" 
+                            class="border-2 border-black uppercase bg-light-black text-gray-100 text-xs font-extrabold py-2 px-4 rounded-3xl hover:bg-gray-200 hover:text-black transition duration-300 ease-in-out">
+                            Read More
+                            </a>
+                        </div>
+                    @endif
+                </div>
+                <div class="w-full border-t border-white my-15"></div>
+            @endforeach
         </div>
+    </div>
     </div>
 @endsection

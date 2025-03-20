@@ -24,7 +24,7 @@
                         FilmWords
                     </a>
                 </div>
-                <nav class="space-x-15 text-gray-300 text-sm sm:text-base">
+                <nav class="space-x-16 text-gray-300 text-sm sm:text-base">
                     <a class="no-underline text-lg font-semibold hover:text-orange-400 hover:scale-105 transition-transform duration-300 {{ request()->is('/') ? 'text-orange-400' : '' }}" href="{{ url('/') }}">Home</a>
                     <a class="no-underline text-lg font-semibold hover:text-orange-400 hover:scale-105 transition-transform duration-300 {{ request()->is('blog') ? 'text-orange-400' : '' }}" href="{{ url('/blog') }}">Blog</a>
                     @guest
@@ -35,10 +35,10 @@
                             <a class="no-underline text-lg font-semibold hover:text-orange-400 hover:scale-105 transition-transform duration-300 {{ request()->is('register') ? 'text-orange-400' : '' }}" href="{{ route('register') }}">{{ __('Register') }}</a>
                         @endif
                     @else
-                        <span>{{ Auth::user()->name }}</span>
+                        <span class="no-underline text-lg font-semibold cursor-default ">{{ Auth::user()->name }}</span>
 
                         <a href="{{ route('logout') }}"
-                           class="no-underline text-lg"
+                           class="no-underline text-lg font-semibold hover:text-orange-400 hover:scale-105 transition-transform duration-300"
                            onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
