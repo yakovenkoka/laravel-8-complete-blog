@@ -19,96 +19,98 @@
         </div>
     </div>
 
-    <div class="w-4/5 mx-auto py-15 border-b border-gray-200">
-        <div class="sm:grid grid-cols-2 gap-20 mb-10">
-            <div class="m-auto sm:m-auto text-left w-4/5 block">
-                <h2 class="text-4xl font-extrabold text-black">
-                    <strong>Movies You Must Watch at Least Once in Your Life</strong>
-                </h2>
-                <p class="py-8 text-gray-500 text-s">
-                    <em>Description:</em> Some films are a must-watch for everyone. These are the movies that left a mark on history.
-                </p>
-                <p class="py-8 text-gray-500 text-s">
-                    <strong>Answer:</strong> We have compiled a list of iconic films that will broaden your cinematic horizons and leave a lasting impression.
-                </p>
-            </div>
-            <div>
-                <img src="{{ asset('images/films1.jpg') }}" width="700" alt="Movie 1">
-            </div>
-        </div>
-
-        <div class="sm:grid grid-cols-2 gap-20 mb-10">
-            <div class="m-auto sm:m-auto text-left w-4/5 block">
-                <h2 class="text-3xl font-extrabold text-gray-600">
-                    <strong>Oscar-Winning Films That Quickly Faded into Obscurity</strong>
-                </h2>
-                <p class="py-8 text-gray-500 text-s">
-                    <em>Description:</em> Some movies win the most prestigious award in cinema but are soon forgotten by audiences.
-                </p>
-                <p class="py-8 text-gray-500 text-s">
-                    <strong>Answer:</strong> We analyze which Oscar-winning films failed to stand the test of time.
-                </p>
-            </div>
-            <div>
-                <img src="{{ asset('images/movie2.jpg') }}" width="700" alt="Movie 2">
-            </div>
-        </div>
-
-        <div class="sm:grid grid-cols-2 gap-20 mb-10">
-            <div class="m-auto sm:m-auto text-left w-4/5 block">
-                <h2 class="text-3xl font-extrabold text-gray-600">
-                    <strong>Movies That Divided Audiences and Critics</strong>
-                </h2>
-                <p class="py-8 text-gray-500 text-s">
-                    <em>Description:</em> Sometimes, the public and critics have vastly different opinions on a film.
-                </p>
-                <p class="py-8 text-gray-500 text-s">
-                    <strong>Answer:</strong> We recall the most controversial movies that sparked heated debates.
-                </p>
-            </div>
-            <div>
-                <img src="{{ asset('images/movie3.jpg') }}" width="700" alt="Movie 3">
-            </div>
-        </div>
-
-        <div class="sm:grid grid-cols-2 gap-20 mb-10">
-            <div class="m-auto sm:m-auto text-left w-4/5 block">
-                <h2 class="text-3xl font-extrabold text-gray-600">
-                    <strong>Real Events That Inspired Great Films</strong>
-                </h2>
-                <p class="py-8 text-gray-500 text-s">
-                    <em>Description:</em> Sometimes, reality creates stories more fascinating than any screenwriter could imagine.
-                </p>
-                <p class="py-8 text-gray-500 text-s">
-                    <strong>Answer:</strong> We examine films based on true stories and how accurately they depict real events.
-                </p>
-            </div>
-            <div>
-                <img src="{{ asset('images/movie4.jpg') }}" width="700" alt="Movie 4">
-            </div>
-        </div>
-
-        <div class="sm:grid grid-cols-2 gap-20 mb-10">
-            <div class="m-auto sm:m-auto text-left w-4/5 block">
-                <h2 class="text-3xl font-extrabold text-gray-600">
-                    <strong>Movies That Will Make You Watch Them Twice</strong>
-                </h2>
-                <p class="py-8 text-gray-500 text-s">
-                    <em>Description:</em> Some films are filled with hidden details that only become apparent on a second viewing.
-                </p>
-                <p class="py-8 text-gray-500 text-s">
-                    <strong>Answer:</strong> We revisit films where every scene can change the way you perceive the story.
-                </p>
-            </div>
-            <div>
-                <img src="{{ asset('images/movie5.jpg') }}" width="700" alt="Movie 5">
-            </div>
-        </div>
-
+    <div class="w-4/5 mx-auto py-20 border-b border-gray-200">
+        <table class="w-full border border-white">
+            <tr class="border border-white">
+                <td class="p-10">
+                    <div class="sm:grid grid-cols-2 gap-15 mb-7">
+                        <div class="m-auto sm:m-auto text-left w-4/5 block">
+                            <h2 class="pb-16 text-4xl font-black text-black">
+                                <strong>Movies You Must Watch at Least Once in Your Life</strong>
+                            </h2>
+                            <p class="pb-14 text-gray-900 text-xl">
+                                Some films are not just watched – they are experienced. They challenge perceptions, leave a lasting impact, and pull you into stories that refuse to let go. Here is a list of movies that will redefine how you think about film.
+                            </p>
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/films1.jpeg') }}" width="600" alt="Movie 1">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr class="border border-white">
+                <td class="p-10">
+                    <div class="sm:grid grid-cols-2 gap-15 mb-7">
+                        <div class="m-auto sm:m-auto text-left w-4/5 block">
+                            <h2 class="pb-16 text-4xl font-black text-black">
+                                <strong>Oscar-Winning Films That Quickly Faded into Obscurity</strong>
+                            </h2>
+                            <p class="pb-14 text-gray-900 text-xl">
+                                Every year, Hollywood crowns its best films, but how many truly stand the test of time? Some Oscar winners fade into obscurity, lost in the shadows of history. Let us explore why some films remain unforgettable while others vanish without a trace.
+                            </p>
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/films2.jpg') }}" width="600" alt="Movie 2">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr class="border border-white">
+                <td class="p-10">
+                    <div class="sm:grid grid-cols-2 gap-15 mb-7">
+                        <div class="m-auto sm:m-auto text-left w-4/5 block">
+                            <h2 class="pb-16 text-4xl font-black text-black">
+                                <strong>Movies That Divided Audiences and Critics</strong>
+                            </h2>
+                            <p class="pb-14 text-gray-900 text-xl">
+                                These films sparked debates, ignited controversies, and split audiences into passionate defenders and harsh critics. Some were hailed as masterpieces by critics but dismissed by viewers, while others won the hearts of audiences despite professional backlash. What makes them so polarizing?
+                            </p>
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/films3.jpeg') }}" width="600" alt="Movie 2">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr class="border border-white">
+                <td class="p-10">
+                    <div class="sm:grid grid-cols-2 gap-15 mb-7">
+                        <div class="m-auto sm:m-auto text-left w-4/5 block">
+                            <h2 class="pb-16 text-4xl font-black text-black">
+                                <strong>Real Events That Inspired Great Films</strong>
+                            </h2>
+                            <p class="pb-14 text-gray-900 text-xl">
+                                Sometimes, reality writes the most compelling scripts. Tragic fates, incredible triumphs, and shocking true events have inspired some of the most powerful films ever made. But how much of what we see on screen is true, and where does fiction take over?
+                            </p>
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/films4.jpeg') }}" width="600" alt="Movie 2">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr class="border border-white">
+                <td class="p-10">
+                    <div class="sm:grid grid-cols-2 gap-15 mb-7">
+                        <div class="m-auto sm:m-auto text-left w-4/5 block">
+                            <h2 class="pb-16 text-4xl font-black text-black">
+                                <strong>Movies That Will Make You Watch Them Twice</strong>
+                            </h2>
+                            <p class="pb-14 text-gray-900 text-xl">
+                                You reach the final scene, the credits roll, and you are left thinking, What just happened? Some films hide their meaning beneath layers of symbolism, clues, and twists that only become clear upon a second viewing. Here is a selection of mind-bending movies that demand to be watched again.
+                            </p>
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/films5.jpg') }}" width="600" alt="Movie 2">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
         <div class="text-center mt-10">
             <a 
                 href="/blog"
-                class="uppercase bg-blue-500 text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl">
+                class="uppercase bg-light-black text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl">
                 Find Out More
             </a>
         </div>
