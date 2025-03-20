@@ -34,7 +34,7 @@
                             </p>
                         </div>
                         <div>
-                            <img src="{{ asset('images/films3.jpg') }}" style="width: 500px; height: 300px; object-fit: cover;" alt="Movie 1">
+                            <img src="{{ asset('images/films3.jpg') }}" style="width: 500px; height: 300px; object-fit: cover; margin-top: 5px" alt="Movie 1">
                         </div>
                     </div>
                 </td>
@@ -51,7 +51,7 @@
                             </p>
                         </div>
                         <div>
-                            <img src="{{ asset('images/films2.jpg') }}" style="width: 500px; height: 300px; object-fit: cover;" alt="Movie 1">
+                            <img src="{{ asset('images/films2.jpg') }}" style="width: 500px; height: 300px; object-fit: cover; margin-top: 8px" alt="Movie 1">
                         </div>
                     </div>
                 </td>
@@ -67,7 +67,7 @@
                             </p>
                         </div>
                         <div>
-                            <img src="{{ asset('images/films6.jpg') }}" style="width: 500px; height: 300px; object-fit: cover;" alt="Movie 1">
+                            <img src="{{ asset('images/films6.jpg') }}" style="width: 500px; height: 300px; object-fit: cover; margin-top: 8px" alt="Movie 1">
                         </div>
                     </div>
                 </td>
@@ -129,7 +129,7 @@
                     @if ($index % 2 == 0)
                         <div class="m-auto sm:m-auto text-left w-5/6 block">
                             <h3 class="text-3xl pb-8 font-bold">{{ $post->title }}</h3>
-                            <p class="text-gray-800 pb-6 text-lg">{{ Str::limit($post->description, 500, '...') }}</p>
+                            <p class="text-gray-800 pb-8 text-lg">{{ Str::limit($post->description, 500, '...') }}</p>
                             <a
                             href="/blog/{{ $post->slug }}" 
                             class="border-2 border-black uppercase bg-light-black text-gray-100 text-xs font-extrabold py-2 px-4 rounded-3xl hover:bg-gray-200 hover:text-black transition duration-300 ease-in-out">
@@ -145,7 +145,7 @@
                         </div>
                         <div class="m-auto sm:m-auto text-left w-4/5 block">
                             <h3 class="text-3xl pb-8 font-bold">{{ $post->title }}</h3>
-                            <p class="text-gray-800 pb-6 text-lg">{{ Str::limit($post->description, 500, '...') }}</p>
+                            <p class="text-gray-800 pb-8 text-lg">{{ Str::limit($post->description, 500, '...') }}</p>
                             <a
                             href="/blog/{{ $post->slug }}" 
                             class="border-2 border-black uppercase bg-light-black text-gray-100 text-xs font-extrabold py-2 px-4 rounded-3xl hover:bg-gray-200 hover:text-black transition duration-300 ease-in-out">
