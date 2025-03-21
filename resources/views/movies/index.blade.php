@@ -4,6 +4,19 @@
 <div class="container mx-auto px-4 py-15">
     <h1 class="text-center text-5xl font-bold text-black mb-15">My Movie List</h1>
 
+    <div class="text-center mb-10">
+        <p class="text-xl text-gray-700 mb-6">
+            <img src="{{ asset('images/movie_icon.png') }}" alt="Movie Icon" class="inline-block w-8 h-8 mr-2">
+            Welcome to the "My Movie List" page! Here, you can keep track of movies you have discovered or read about in our blog. 
+            This page helps you manage all the movies you want to watch and those you have already seen.
+        </p>
+        <p class="text-xl text-gray-700">
+            <img src="{{ asset('images/list_icon.png') }}" alt="List Icon" class="inline-block w-8 h-8 mr-2">
+            You can add new movies, specify their release year, mark movies as watched, and remove them from the list. 
+            Use this page to ensure you never forget about the movies you want to watch and share your experiences with friends!
+        </p>
+    </div>
+
     <form action="{{ route('movies.store') }}" method="POST" class="mb-8">
         @csrf
         <div class="flex items-center mb-4">

@@ -1,4 +1,3 @@
-<!-- filepath: /Users/karinayakovenko/VSCode/Server side/CA2/laravel-8-complete-blog/resources/views/index.blade.php -->
 @extends('layouts.app')
 
 @section('content')
@@ -113,7 +112,7 @@
         </span>
     </div>
 
-    <div class="text-center py-15">
+    <div class="text-center pt-15 pb-5">
         <span class="uppercase text-l text-gray-500">
             Blog
         </span>
@@ -122,7 +121,7 @@
             Recent Posts
         </h2>
     
-        <div class="w-4/6 mx-auto pt-3 border-b border-gray-200">
+        <div class="w-4/6 mx-auto pt-3">
             <div class="w-full border-t border-white my-15"></div>
             @foreach ($latestPosts as $index => $post)
                 <div class="sm:grid grid-cols-2 gap-10 mb-7">
@@ -158,5 +157,13 @@
             @endforeach
         </div>
     </div>
+    </div>
+
+    <div class="text-center">
+        <a 
+            href="/blog"
+            class="border-2 border-black uppercase bg-light-black text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl hover:bg-gray-200 hover:text-black">
+            Find Out More
+        </a>
     </div>
 @endsection

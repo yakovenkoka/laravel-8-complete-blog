@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="w-4/5 m-auto text-center">
-    <div class="py-15 border-b border-gray-200">
+<div class="w-5/6 m-auto text-center">
+    <div class="py-15 border-b border-gray-700">
         <h1 class="text-5xl font-bold text-black">
             Blog Posts
         </h1>
@@ -10,7 +10,7 @@
 </div>
 
 @if (session()->has('message'))
-    <div class="w-4/5 m-auto mt-10 pl-2">
+    <div class="w-5/6 m-auto mt-10 pl-2">
         <p class="w-2/6 mb-4 text-gray-50 bg-green-500 rounded-2xl py-4">
             {{ session()->get('message') }}
         </p>
@@ -21,19 +21,19 @@
     <div class="pt-15 w-4/5 m-auto">
         <a 
             href="/blog/create"
-            class="bg-blue-500 uppercase bg-transparent text-gray-100 text-xs font-extrabold py-3 px-5 rounded-3xl">
+            class="border-2 border-black uppercase bg-light-black text-gray-100 text-s font-extrabold py-3 px-6 rounded-3xl hover:bg-gray-200 hover:text-black">
             Create post
         </a>
     </div>
 @endif
 
 @foreach ($posts as $post)
-    <div class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200">
-        <div>
-            <img src="{{ asset('images/' . $post->image_path) }}" alt="">
+    <div class="sm:grid grid-cols-2 gap-12 w-5/6 mx-auto py-15 border-b border-gray-700">
+        <div class="pl-5">
+            <img src="{{ asset('images/' . $post->image_path) }}" style="width: 520px; height: 305px; object-fit: cover; margin-top:0.6em;" alt="">
         </div>
         <div>
-            <h2 class="text-gray-700 font-bold text-5xl pb-4">
+            <h2 class="text-gray-900 font-bold text-3xlxl pb-4 w-6/10">
                 {{ $post->title }}
             </h2>
 
@@ -42,23 +42,23 @@
             </span>
 
             <p class="text-xl text-gray-700 pt-8 pb-10 leading-8 font-light">
-                {{ $post->description }}
+                {{ Str::limit($post->description, 800) }}
             </p>
 
-            <a href="/blog/{{ $post->slug }}" class="uppercase bg-blue-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl">
+            <a href="/blog/{{ $post->slug }}" class="border-2 border-black uppercase bg-light-black text-gray-100 text-s font-extrabold py-2 px-4 rounded-3xl hover:bg-gray-200 hover:text-black">
                 Keep Reading
             </a>
 
             @if (isset(Auth::user()->id) && Auth::user()->id == $post->user_id)
-                <span class="float-right">
+                <span class="float-right pr-2 ">
                     <a 
                         href="/blog/{{ $post->slug }}/edit"
-                        class="text-gray-700 italic hover:text-gray-900 pb-1 border-b-2">
+                        class="font-mono font-semibold text-gray-900 italic hover:text-gray-700 pb-1 pr-1 pl-1 border-b-2  border-gray-800">
                         Edit
                     </a>
                 </span>
 
-                <span class="float-right">
+                <span class="float-right pr-5">
                      <form 
                         action="/blog/{{ $post->slug }}"
                         method="POST">
@@ -66,7 +66,7 @@
                         @method('delete')
 
                         <button
-                            class="text-red-500 pr-3"
+                            class=" font-mono font-semibold text-red-600 hover:text-red-500"
                             type="submit">
                             Delete
                         </button>

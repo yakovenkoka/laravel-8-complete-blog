@@ -17041,6 +17041,10 @@ video {
   font-size: 1.875rem;
 }
 
+.text-3xlxl{
+  font-size: 2.55rem;
+}
+
 .text-4xl {
   font-size: 2.25rem;
 }
@@ -22511,6 +22515,10 @@ video {
 
 .pb-1 {
   padding-bottom: 0.25rem;
+}
+
+.pb11 {
+  padding-bottom: 0.30rem;
 }
 
 .pl-1 {
