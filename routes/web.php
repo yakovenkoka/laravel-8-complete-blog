@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\MovieController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,3 +42,10 @@ Route::get('/contact', function () {
 })->name('contact');
 
 Route::post('/contact/send', [ContactController::class, 'send'])->name('contact.send');
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/movies', [MovieController::class, 'index'])->name('movies.index');
+    Route::post('/movies', [MovieController::class, 'store'])->name('movies.store');
+    Route::delete('/movies/{movie}', [MovieController::class, 'destroy'])->name('movies.destroy');
+    Route::patch('/movies/{movie}/watched', [MovieController::class, 'markAsWatched'])->name('movies.markAsWatched');
+});

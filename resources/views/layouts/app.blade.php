@@ -27,6 +27,7 @@
                 <nav class="space-x-16 text-gray-300 text-sm sm:text-base">
                     <a class="no-underline text-lg font-semibold hover:text-orange-400 hover:scale-105 transition-transform duration-300 {{ request()->is('/') ? 'text-orange-400' : '' }}" href="{{ url('/') }}">Home</a>
                     <a class="no-underline text-lg font-semibold hover:text-orange-400 hover:scale-105 transition-transform duration-300 {{ request()->is('blog') ? 'text-orange-400' : '' }}" href="{{ url('/blog') }}">Blog</a>
+                    <a class="no-underline text-lg font-semibold hover:text-orange-400 hover:scale-105 transition-transform duration-300 {{ request()->is('movies') ? 'text-orange-400' : '' }}" href="{{ url('/movies') }}">My Movie List</a>
                     <a class="no-underline text-lg font-semibold hover:text-orange-400 hover:scale-105 transition-transform duration-300 {{ request()->is('about') ? 'text-orange-400' : '' }}" href="{{ url('/about') }}">About Us</a>
                     <a class="no-underline text-lg font-semibold hover:text-orange-400 hover:scale-105 transition-transform duration-300 {{ request()->is('contact') ? 'text-orange-400' : '' }}" href="{{ url('/contact') }}">Contact Us</a>
                     @guest
