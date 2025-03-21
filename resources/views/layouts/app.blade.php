@@ -28,6 +28,7 @@
                     <a class="no-underline text-lg font-semibold hover:text-orange-400 hover:scale-105 transition-transform duration-300 {{ request()->is('/') ? 'text-orange-400' : '' }}" href="{{ url('/') }}">Home</a>
                     <a class="no-underline text-lg font-semibold hover:text-orange-400 hover:scale-105 transition-transform duration-300 {{ request()->is('blog') ? 'text-orange-400' : '' }}" href="{{ url('/blog') }}">Blog</a>
                     <a class="no-underline text-lg font-semibold hover:text-orange-400 hover:scale-105 transition-transform duration-300 {{ request()->is('about') ? 'text-orange-400' : '' }}" href="{{ url('/about') }}">About Us</a>
+                    <a class="no-underline text-lg font-semibold hover:text-orange-400 hover:scale-105 transition-transform duration-300 {{ request()->is('contact') ? 'text-orange-400' : '' }}" href="{{ url('/contact') }}">Contact Us</a>
                     @guest
                         @if (Route::has('login'))
                             <a class="no-underline text-lg font-semibold hover:text-orange-400 hover:scale-105 transition-transform duration-300 {{ request()->is('login') ? 'text-orange-400' : '' }}" href="{{ route('login') }}">{{ __('Login') }}</a>
