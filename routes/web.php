@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,3 +35,9 @@ Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->nam
 Route::get('/about', function () {
     return view('about');
 });
+
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact');
+
+Route::post('/contact/send', [ContactController::class, 'send'])->name('contact.send');
