@@ -14,20 +14,27 @@ class MovieController extends Controller
     }
 
     public function store(Request $request)
-    {
-        $request->validate([
-            'title' => 'required|string|max:255',
-            'year' => 'nullable|integer',
-        ]);
+{
+    $request->validate([
+        'title' => 'required|string|max:255',
+        'year' => 'nullable|integer',
+        'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+    ]);
 
-        Movie::create([
-            'title' => $request->title,
-            'year' => $request->year,
-            'user_id' => Auth::id(),
-        ]);
+    $movie = new Movie();
+    $movie->title = $request->title;
+    $movie->year = $request->year;
+    $movie->user_id = auth()->id(); // Set the user_id to the currently authenticated user
 
-        return redirect()->route('movies.index');
+    if ($request->hasFile('image')) {
+        $imagePath = $request->file('image')->store('movies', 'public');
+        $movie->image = $imagePath;
     }
+
+    $movie->save();
+
+    return redirect()->route('movies.index')->with('success', 'Movie added successfully!');
+}
 
     public function destroy(Movie $movie)
     {

@@ -13,6 +13,7 @@ class Movie extends Model
         'title',
         'year',
         'watched',
+        'image',
         'user_id',
     ];
 }
