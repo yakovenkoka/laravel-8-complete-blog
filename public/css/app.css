@@ -22505,6 +22505,10 @@ video {
   padding-left: 0;
 }
 
+.pt-1-1 {
+  padding-top: 0.15rem;
+}
+
 .pt-1 {
   padding-top: 0.25rem;
 }
@@ -34054,6 +34058,14 @@ video {
 
 .w-96 {
   width: 24rem;
+}
+
+.w-99{
+  width: 30rem;
+}
+
+.w-100{
+  width: 34rem;
 }
 
 .w-auto {
