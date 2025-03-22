@@ -1,3 +1,4 @@
+<!-- filepath: /Users/karinayakovenko/VSCode/Server side/CA2/laravel-8-complete-blog/resources/views/movies/index.blade.php -->
 @extends('layouts.app')
 
 @section('content')
@@ -21,7 +22,7 @@
 <div class="container mx-auto px-4 py-15">
     <h1 class="text-center text-5xl font-bold text-black mb-15">My Movie List</h1>
 
-    <div class="text-center mb-10">
+    <div class="text-center mb-15">
         <p class="text-xl text-gray-900 mb-6">
             <img src="{{ asset('images/movie_icon4.png') }}" alt="Movie Icon" class="inline-block w-8 h-8 mr-2">
             Welcome to the "My Movie List" page! Here, you can keep track of movies you have discovered or read about in our blog. 
@@ -33,11 +34,10 @@
             Use this page to ensure you never forget about the movies you want to watch and share your experiences with friends!
         </p>
     </div>
-
-    <h2 class="text-center text-3xl font-bold text-black mb-8 pt-4">Add a New Movie</h2>
-
+    <hr class="border-black mb-12 mt-16">
     <form id="addMovieForm" action="{{ route('movies.store') }}" method="POST" enctype="multipart/form-data" class="mb-8 border-2 border-black p-8 rounded-lg w-100 mx-auto no-spin-buttons focus-outline">
         @csrf
+        <h2 class="text-center text-3xl font-bold text-black mb-8 pt-4">Add a New Movie</h2>
         <div class="flex flex-col items-center mb-4 space-y-5 pt-1">
             <label for="title" class="pt-3 self-start pl-1 font-mono font-medium text-gray-700 text-sm">Movie Title</label>
             <input type="text" name="title" id="title" placeholder="Movie Title" class="border p-2 w-99 rounded-lg" required>
@@ -57,6 +57,9 @@
         </div>
     </form>
     
+    <hr class="border-black mb-12 mt-16">
+
+    <h2 class="text-center text-3xl font-bold text-black mb-8 pt-4">Added Movies</h2>
     <div class="header-row flex justify-between mb-4 pt-12 pb-1">
         <span class="header-item w-1/12 text-center font-bold pl-8">Watched</span>
         <span class="header-item w-1/12 text-center font-bold pl-8">Image</span>

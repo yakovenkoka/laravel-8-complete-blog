@@ -159,11 +159,34 @@
     </div>
     </div>
 
-    <div class="text-center">
+    <div class="text-center pt-3 pb-12">
         <a 
             href="/blog"
             class="border-2 border-black uppercase bg-light-black text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl hover:bg-gray-200 hover:text-black">
             Find Out More
         </a>
+    </div>
+
+    <div class="w-full border-t border-white my-10 mx-auto" style="width: 80%;"></div>
+
+    <div class="w-4/5 mx-auto py-20 ">
+        <div class="sm:grid grid-cols-2 gap-15 mb-7">
+            <div class="m-auto sm:m-auto text-left w-4/5 block">
+                <h2 class="pb-16 text-5xl font-black text-black">
+                    <strong>My Movie List</strong>
+                </h2>
+                <p class="pb-14 text-gray-900 text-xl">
+                    Discover and manage all the movies you want to watch and those you have already seen. Add new movies, specify their release year, mark movies as watched, and remove them from the list. Share your experiences with friends and never forget about the movies you want to watch!
+                </p>
+                <a 
+                    href="{{ route('movies.index') }}"
+                    class="border-2 border-black uppercase bg-light-black text-gray-100 text-xs font-extrabold py-2 px-4 rounded-3xl hover:bg-gray-200 hover:text-black transition duration-300 ease-in-out">
+                    Go to My Movie List
+                </a>
+            </div>
+            <div>
+                <img src="{{ asset('images/my_movie_list.jpg') }}" style="width: 500px; height: 300px; object-fit: cover; margin-top: 8px" alt="My Movie List">
+            </div>
+        </div>
     </div>
 @endsection

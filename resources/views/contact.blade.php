@@ -19,9 +19,10 @@
 </div>
 
 <div class="w-2/4 m-auto py-5">
-    <div class="bg-gray-100 p-10 rounded-lg shadow-lg">
+    <div class="border-2 border-black shadow-xl p-10 rounded-lg">
         <form action="{{ route('contact.send') }}" method="POST">
             @csrf
+            <h2 class="text-2xl font-bold text-center mb-8 text-gray-900">Send Us a Message</h2>
             <div class="mb-8">
                 <label for="name" class="block mb-2 text-sm font-bold text-gray-700">Name</label>
                 <input type="text" id="name" name="name" class="w-full px-3 py-2 text-gray-700 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
@@ -42,6 +43,5 @@
         </form>
     </div>
 </div>
-
 
 @endsection
