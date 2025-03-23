@@ -20,8 +20,9 @@ class PostsController extends Controller
      */
     public function index()
     {
-        return view('blog.index')
-            ->with('posts', Post::orderBy('updated_at', 'DESC')->get());
+        $posts = Post::orderBy('updated_at', 'DESC')->get();
+        $latestPosts = Post::orderBy('created_at', 'desc')->take(3)->get();
+        return view('blog.index', compact('posts', 'latestPosts'));
     }
 
     /**

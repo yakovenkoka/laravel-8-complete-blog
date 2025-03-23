@@ -15,7 +15,7 @@
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
-<body class="bg-custom-bg h-screen antialiased leading-none font-sans">
+<body>
     <div id="app">
         <header class="bg-light-black py-6">
             <div class="container mx-auto flex justify-between items-center px-2">
@@ -57,7 +57,7 @@
         </div>
 
         <div>
-            @include('layouts.footer')
+            @include('layouts.footer', ['latestPosts' => $latestPosts ?? collect()])
         </div>
     </div>
 </body>
