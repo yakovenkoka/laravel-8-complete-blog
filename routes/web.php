@@ -5,6 +5,7 @@ use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\MovieController;
+use App\Http\Controllers\CommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,3 +52,5 @@ Route::middleware(['auth'])->group(function () {
 });
 
 Route::get('/blog/{slug}', [PostsController::class, 'show'])->name('blog.show');
+
+Route::post('/comments/{post}', [CommentController::class, 'store'])->name('comments.store');

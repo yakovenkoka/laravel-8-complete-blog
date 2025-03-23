@@ -21,5 +21,25 @@
         </p>
     </div>
 </div>
+<hr class="border-black my-4 w-4/5 m-auto mt-15">
+<div id="comments" class="w-4/5 m-auto pt-12">
+    <h2 class="text-5xl font-semibold text-gray-900 mb-12">Comments</h2>
+
+    @auth
+    <form action="{{ route('comments.store', $post->id) }}" method="POST" class="mt-6">
+        @csrf
+        <textarea name="content" rows="4" class="bg-transparent block border-b-3 border-r-1 border-l-1 border-t-1 border-black w-full h-40 text-xl outline-none pt-7 pl-8 mb-4 rounded-lg placeholder-gray-600 italic resize-none" placeholder="Add a comment..."></textarea>
+        <button type="submit" class="mt-6 mb-2 ml-2 border-2 border-black uppercase bg-light-black text-gray-100 text-s font-extrabold py-2 px-8 rounded-3xl hover:bg-gray-200 hover:text-black focus:outline-none">Submit</button>
+    </form>
+    @endauth
+
+    @foreach ($post->comments as $comment)
+        <div class="mt-5 border-t border-gray-500 pt-4">
+            <p class="text-gray-800 mt-1"><strong>{{ $comment->user->name }}</strong> said:</p>
+            <p class="text-gray-600 pt-1">{{ $comment->content }}</p>
+            <p class="text-gray-400 text-sm pt-1">{{ $comment->created_at->diffForHumans() }}</p>
+        </div>
+    @endforeach
+</div>
 
 @endsection

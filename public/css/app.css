@@ -16093,8 +16093,16 @@ video {
   border-top-width: 0;
 }
 
+.border-t-1 {
+  border-top-width: 1px;
+}
+
 .border-r-0 {
   border-right-width: 0;
+}
+
+.border-r-1 {
+  border-right-width: 1px;
 }
 
 .border-b-0 {
@@ -16103,6 +16111,10 @@ video {
 
 .border-l-0 {
   border-left-width: 0;
+}
+
+.border-l-1 {
+  border-left-width: 1px;
 }
 
 .border-t-2 {
@@ -16115,6 +16127,10 @@ video {
 
 .border-b-2 {
   border-bottom-width: 2px;
+}
+
+.border-b-3 {
+  border-bottom-width: 3px;
 }
 
 .border-l-2 {

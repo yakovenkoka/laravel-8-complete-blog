@@ -45,9 +45,14 @@
                 {{ Str::limit($post->description, 800) }}
             </p>
 
-            <a href="/blog/{{ $post->slug }}" class="border-2 border-black uppercase bg-light-black text-gray-100 text-s font-extrabold py-2 px-4 rounded-3xl hover:bg-gray-200 hover:text-black">
-                Keep Reading
-            </a>
+            <div class="flex items-center">
+                <a href="/blog/{{ $post->slug }}" class="border-2 border-black uppercase bg-light-black text-gray-100 text-s font-extrabold py-2 px-4 rounded-3xl hover:bg-gray-200 hover:text-black">
+                    Keep Reading
+                </a>
+                <a href="/blog/{{ $post->slug }}#comments" class="ml-6 text-black hover:text-gray-700">
+                    <i class="fas fa-comments fa-lg"></i>
+                </a>
+            </div>
 
             @if (isset(Auth::user()->id) && Auth::user()->id == $post->user_id)
                 <span class="float-right pr-2 ">
