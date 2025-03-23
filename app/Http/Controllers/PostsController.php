@@ -128,5 +128,11 @@ class PostsController extends Controller
         return redirect('/blog')
             ->with('message', 'Your post has been deleted!');
     }
+
+    public function footer()
+{
+    $latestPosts = Post::latest()->take(5)->get();
+    return view('layouts.footer', compact('latestPosts'));
+}
 }
 

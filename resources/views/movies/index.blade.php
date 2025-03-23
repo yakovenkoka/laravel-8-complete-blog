@@ -1,4 +1,3 @@
-<!-- filepath: /Users/karinayakovenko/VSCode/Server side/CA2/laravel-8-complete-blog/resources/views/movies/index.blade.php -->
 @extends('layouts.app')
 
 @section('content')

@@ -34076,6 +34076,10 @@ video {
   width: 1px;
 }
 
+.footer-links a:hover {
+  color: white;
+}
+
 .w-0\.5 {
   width: 0.125rem;
 }
