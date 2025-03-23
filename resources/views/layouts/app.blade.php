@@ -15,15 +15,13 @@
     
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body class="bg-custom-bg h-screen antialiased leading-none font-sans">
     <div id="app">
         <header class="bg-light-black py-6">
             <div class="container mx-auto flex justify-between items-center px-2">
                 <div>
-                    <a href="{{ url('/') }}" class="text-2xl font-bold text-white no-underline">
+                    <a href="{{ url('/') }}" class="text-2xl font-bold text-white no-underline mr-30">
                         FilmWords
                     </a>
                 </div>
