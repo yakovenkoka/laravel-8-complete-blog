@@ -54,7 +54,29 @@
         </div>
     </div>
 </div>
-
+<hr class="border-white my-4 w-4/5 m-auto mt-10 mb-12">
+<div class="w-4/5 m-auto py-10">
+    <div class="sm:grid grid-cols-2 gap-10">
+        <div>
+            <img src="{{ asset('images/movie_list.jpg') }}" style="width: 550px; height: 350px; object-fit: cover;" alt="My Movie List">
+        </div>
+        <div class="text-gray-800 text-lg leading-8 font-medium">
+            <h2 class="text-3xl font-extrabold mb-4 text-orange-400" style="text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.786);">My Movie List</h2>
+            <p class="mb-8">
+                Our blog features a special section called "My Movie List" where you can keep track of movies you have discovered or read about in our blog. This section helps you manage all the movies you want to watch and those you have already seen.
+            </p>
+            <p class="mb-8">
+                You can add new movies, specify their release year, mark movies as watched, and remove them from the list. Use this section to ensure you never forget about the movies you want to watch and share your experiences with friends!
+            </p>
+            <a 
+                href="{{ url('/movies') }}"
+                class="border-2 border-black uppercase bg-light-black text-gray-100 text-s font-extrabold py-1 px-8  rounded-3xl hover:bg-gray-200 hover:text-black">
+                Go to My Movie List
+            </a>
+        </div>
+    </div>
+</div>
+<hr class="border-white my-4 w-4/5 m-auto mt-10">
 <div class="w-4/5 m-auto py-10">
     <div class="text-center">
         <h2 class="text-3xl font-extrabold mb-8 text-orange-400" style="text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.786);">Contact Me</h2>
