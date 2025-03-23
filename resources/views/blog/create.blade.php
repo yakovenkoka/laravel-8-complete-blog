@@ -3,7 +3,7 @@
 @section('content')
 <div class="w-4/5 m-auto text-left">
     <div class="py-15">
-        <h1 class="text-6xl">
+        <h1 class="text-6xl font-medium text-center">
             Create Post
         </h1>
     </div>
@@ -32,16 +32,16 @@
             type="text"
             name="title"
             placeholder="Title..."
-            class="bg-transparent block border-b-2 w-full h-20 text-6xl outline-none">
+            class="bg-transparent block border-b-2 border-black w-full h-20 text-6xl font-medium italic outline-none placeholder-gray-600 placeholder-sm">
 
         <textarea 
             name="description"
             placeholder="Description..."
-            class="py-20 bg-transparent block border-b-2 w-full h-60 text-xl outline-none"></textarea>
+            class="bg-transparent block border border-gray-700 w-full h-80 text-xl outline-none p-4 mb-4 mt-8 rounded-lg placeholder-gray-600 italic"></textarea>
 
         <div class="bg-grey-lighter pt-15">
             <label class="w-44 flex flex-col items-center px-2 py-3 bg-white-rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer">
-                <span class="mt-2 text-base leading-normal">
+                <span class=" text-base leading-normal">
                     Select a file
                 </span>
                 <input 
@@ -53,7 +53,7 @@
 
         <button    
             type="submit"
-            class="uppercase mt-15 bg-blue-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl">
+            class="mt-10 border-2 border-black uppercase bg-light-black text-gray-100 text-s font-extrabold py-3 px-6 rounded-3xl hover:bg-gray-200 hover:text-black focus:outline-none">
             Submit Post
         </button>
     </form>
