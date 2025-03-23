@@ -1,3 +1,4 @@
+<!-- filepath: /Users/karinayakovenko/VSCode/Server side/CA2/laravel-8-complete-blog/resources/views/layouts/app.blade.php -->
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -15,7 +16,7 @@
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
-<body>
+<body class="bg-custom-bg h-screen antialiased leading-none font-sans">
     <div id="app">
         <header class="bg-light-black py-6">
             <div class="container mx-auto flex justify-between items-center px-2">

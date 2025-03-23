@@ -20,7 +20,7 @@
     </div>
 
     <div class="w-4/5 mx-auto py-20 border-b border-gray-200">
-        <table class="w-full border border-white">
+        <table class="w-full border-2 border-white">
             <tr class="border border-white">
                 <td class="p-10">
                     <div class="sm:grid grid-cols-2 gap-15 mb-7">

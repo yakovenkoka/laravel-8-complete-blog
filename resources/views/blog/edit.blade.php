@@ -3,7 +3,7 @@
 @section('content')
 <div class="w-4/5 m-auto text-left">
     <div class="py-15">
-        <h1 class="text-6xl">
+        <h1 class="text-6xl font-medium text-center">
             Update Post
         </h1>
     </div>
@@ -21,7 +21,7 @@
     </div>
 @endif
 
-<div class="w-4/5 m-auto pt-20">
+<div class="w-5/6 m-auto pt-20">
     <form 
         action="/blog/{{ $post->slug }}"
         method="POST"
@@ -33,16 +33,16 @@
             type="text"
             name="title"
             value="{{ $post->title }}"
-            class="bg-transparent block border-b-2 w-full h-20 text-6xl outline-none">
+            class="bg-transparent block border-b-2 w-full h-20 text-5xl outline-none p-4 mb-8 border-black ">
 
         <textarea 
             name="description"
             placeholder="Description..."
-            class="py-20 bg-transparent block border-b-2 w-full h-60 text-xl outline-none">{{ $post->description }}</textarea> 
+            class="bg-transparent block border border-gray-700 w-full h-80 text-xl outline-none p-4 mb-4 rounded-lg">{{ $post->description }}</textarea> 
 
         <button    
             type="submit"
-            class="uppercase mt-15 bg-blue-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl">
+            class="mt-10 border-2 border-black uppercase bg-light-black text-gray-100 text-s font-extrabold py-3 px-6 rounded-3xl hover:bg-gray-200 hover:text-black">
             Submit Post
         </button>
     </form>

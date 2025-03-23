@@ -79,7 +79,7 @@
             <ul class="py-4 sm:text-s pt-4 text-gray-400 footer-links">
                 @foreach($latestPosts as $post)
                     <li class="pb-1">
-                        <a href="{{ url('/blog/' . $post->id) }}">
+                        <a href="{{ url('/blog/' . $post->slug) }}">
                             {{ \Illuminate\Support\Str::words($post->title, 4, '...') }}
                         </a>
                     </li>

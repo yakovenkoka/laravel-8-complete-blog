@@ -49,3 +49,5 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/movies/{movie}', [MovieController::class, 'destroy'])->name('movies.destroy');
     Route::patch('/movies/{movie}/watched', [MovieController::class, 'markAsWatched'])->name('movies.markAsWatched');
 });
+
+Route::get('/blog/{slug}', [PostsController::class, 'show'])->name('blog.show');
