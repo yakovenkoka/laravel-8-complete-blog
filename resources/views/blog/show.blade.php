@@ -37,23 +37,23 @@
     <p class="text-gray-700 text-xl">Please <a href="{{ route('login') }}" class="text-orange-400 hover:underline font-medium italic">login</a> to add a comment.</p>
     @endguest
 
-    <div id="commentList">
-        @foreach ($post->comments as $index => $comment)
-            <div class="mt-5 border-t border-gray-500 pt-4 comment-item {{ $index >= 5 ? 'hidden' : '' }}">
-                <p class="text-gray-800 mt-1"><strong>{{ $comment->user->name }}</strong> said:</p>
-                <p class="text-gray-600 pt-1">{{ $comment->content }}</p>
-                <p class="text-gray-400 text-sm pt-1">{{ $comment->created_at->diffForHumans() }}</p>
-            </div>
-        @endforeach
-    </div>
-
-    @if ($post->comments->count() > 9)
-        <div class="text-center mt-6">
-            <button id="showMoreBtn" class="border-2 border-black uppercase bg-light-black text-gray-100 text-s font-extrabold py-2 px-8 rounded-3xl hover:bg-gray-200 hover:text-black focus:outline-none">Show More</button>
-            <button id="showLessBtn" class="border-2 border-black uppercase bg-light-black text-gray-100 text-s font-extrabold py-2 px-8 rounded-3xl hover:bg-gray-200 hover:text-black focus:outline-none hidden">Show Less</button>
+   <!-- filepath: /Users/karinayakovenko/VSCode/Server side/CA2/laravel-8-complete-blog/resources/views/blog/show.blade.php -->
+<div id="commentList">
+    @foreach ($post->comments as $index => $comment)
+        <div class="mt-5 border-t border-gray-500 pt-4 comment-item {{ $index >= 5 ? 'hidden' : '' }}">
+            <p class="text-gray-800 mt-1"><strong>{{ $comment->user->name }}</strong> said:</p>
+            <p class="text-gray-600 pt-1">{{ $comment->content }}</p>
+            <p class="text-gray-400 text-sm pt-1">{{ $comment->created_at->diffForHumans() }}</p>
         </div>
-    @endif
+    @endforeach
 </div>
+
+@if ($post->comments->count() > 5)
+    <div class="text-center mt-6">
+        <button id="showMoreBtn" class="border-2 border-black uppercase bg-light-black text-gray-100 text-s font-extrabold py-2 px-8 rounded-3xl hover:bg-gray-200 hover:text-black focus:outline-none">Show More</button>
+        <button id="showLessBtn" class="border-2 border-black uppercase bg-light-black text-gray-100 text-s font-extrabold py-2 px-8 rounded-3xl hover:bg-gray-200 hover:text-black focus:outline-none hidden">Show Less</button>
+    </div>
+@endif
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -72,7 +72,7 @@
         if (showLessBtn) {
             showLessBtn.addEventListener('click', function () {
                 commentItems.forEach((item, index) => {
-                    if (index >= 9) {
+                    if (index >= 5) {
                         item.classList.add('hidden');
                     }
                 });
@@ -82,5 +82,4 @@
         }
     });
 </script>
-
 @endsection
