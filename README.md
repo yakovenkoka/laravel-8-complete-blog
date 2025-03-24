@@ -1,10 +1,8 @@
 ## Laravel 8 Complete Blog
 
-This repository is linked to [this youtube video](https://www.youtube.com/watch?v=HKJDLXsTr8A&t=4710s) where I show you how to create a complete blog in Laravel 8 using best practices.
+FilmWords is a place where all movie lovers gather. Here you can find movie reviews, the history of cinema, interesting or unexpected facts about movies, and much more. In addition, the blog has a special feature called "My Movie List", where you can keep track of all the movies you want to watch or have already watched. It is a very convenient place to store your personal movie collection, mark movies as watched, and add new movies to your list. It is a space where movie lovers can share their thoughts, information, and experiences with each other.
 
 •	Author: Karina Yakovenko <br>
-•	Twitter: [@codewithdary](https://twitter.com/codewithdary) <br>
-•	Instagram: [@codewithdary](https://www.instagram.com/codewithdary/) <br>
 
 ## Requirements
 •	PHP 7.3 or higher <br>
@@ -21,7 +19,14 @@ php artisan key:generate
 php artisan cache:clear && php artisan config:clear
 php artisan serve
 ```
-
+Setting up mailhog: <br>
+```
+brew install mailhog
+```
+Run Mailhog:<br>
+```
+mailhog
+```
 ## Before starting <br>
 Create a database <br>
 ```
