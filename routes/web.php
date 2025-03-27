@@ -7,6 +7,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\CommentController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,6 +34,8 @@ Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->nam
 Auth::routes();
 
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/user/{id}/posts', [PostsController::class, 'userPosts'])->name('user.posts');
 
 Route::get('/about', function () {
     return view('about');

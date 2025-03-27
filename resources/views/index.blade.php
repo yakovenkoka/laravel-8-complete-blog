@@ -1,26 +1,143 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="background-image grid grid-cols-1 m-auto" style="background-image: url('{{ asset('images/cinema-background.jpg') }}');">
+    <div class="background-image grid grid-cols-1 m-auto" style="background-image: url('{{ asset('images/cinema-background.jpg') }}'); height: 700px;">
         <div class="flex text-gray-100 pt-10">
             <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5 block text-center">
                 <h1 class="sm:text-white text-5xl uppercase font-bold text-shadow-md pb-14">
                     Lights, Camera, Action!
                 </h1>
-                <h1 class="sm:text-white text-5xl uppercase font-bold text-shadow-md pb-14">
+                <h1 class="sm:text-white text-5xl uppercase font-bold text-shadow-md pb-18">
                     Your Movie Adventure Starts Here
                 </h1>
                 <a 
-                    href="/blog"
-                    class="text-center bg-gray-50 text-black py-2 px-8 font-bold text-xl uppercase hover:bg-orange-400 hover:text-black rounded-lg">
-                    Read More
-                </a>
+                href="/about-us"
+                class="text-center border-2 border-white text-white py-2 px-8  font-bold text-xl uppercase hover:bg-black hover:text-white hover:border-black rounded-lg transition duration-300 ease-in-out">
+                Discover More
+            </a>
             </div>
         </div>
     </div>
 
+   <!-- filepath: /Users/karinayakovenko/VSCode/Server side/CA2/laravel-8-complete-blog/resources/views/index.blade.php -->
+<div class="text-center pt-15 pb-5 bg-dark-pink">
+    <span class="uppercase text-base text-gray-800 font-semibold">
+        Blog
+    </span>
+
+    <h2 class="text-5xl font-extrabold pt-10 text-black">
+        Recent Posts
+    </h2>
+
+    <div class="w-4/5 mx-auto pt-3"> 
+        <div class="w-full border-t border-white my-15"></div>
+        @foreach ($latestPosts as $index => $post)
+            <div class="sm:grid grid-cols-2 gap-10 mb-7">
+                @if ($index % 2 == 0)
+                    <div class="m-auto sm:m-auto text-left w-5/6 block">
+                        <h3 class="text-4xl pb-8 font-bold">{{ $post->title }}</h3>
+                        <p class="text-gray-800 pb-8 text-xl">{{ Str::limit($post->description, 500, '...') }}</p>
+                        <a
+                        href="/blog/{{ $post->slug }}" 
+                        class="border-2 border-black uppercase bg-light-black text-gray-100 text-xs font-extrabold py-2 px-4 rounded-3xl hover:bg-gray-200 hover:text-black transition duration-300 ease-in-out">
+                        Read More
+                        </a>
+                    </div>
+                    <div class="flex content-center">
+                        <img src="{{ asset('images/' . $post->image_path) }}" style="height: auto; object-fit: contain;" alt="{{ $post->title }}">
+                    </div>
+                @else
+                    <div>
+                        <img src="{{ asset('images/' . $post->image_path) }}" width="height: auto; object-fit: contain;" alt="{{ $post->title }}">
+                    </div>
+                    <div class="m-auto sm:m-auto text-left w-5/6 block">
+                        <h3 class="text-4xl pb-8 font-bold">{{ $post->title }}</h3>
+                        <p class="text-gray-800 pb-8 text-xl">{{ Str::limit($post->description, 500, '...') }}</p>
+                        <a
+                        href="/blog/{{ $post->slug }}" 
+                        class="border-2 border-black uppercase bg-light-black text-gray-100 text-xs font-extrabold py-2 px-4 rounded-3xl hover:bg-gray-200 hover:text-black transition duration-300 ease-in-out">
+                        Read More
+                        </a>
+                    </div>
+                @endif
+            </div>
+            <div class="w-full border-t border-white my-15"></div>
+        @endforeach
+    </div>
+</div>
+    
+    <div class="text-center pt-3 pb-16 bg-dark-pink rounded-b-3xl border-b-3 border-black">
+        <a 
+            href="/blog"
+            class="border-2 border-black uppercase bg-light-black text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl hover:bg-gray-200 hover:text-black">
+            Find Out More
+        </a>
+    </div>
+
+    {{-- <div class="w-full border-t border-white my-10 mx-auto" style="width: 80%;"></div> --}}
+
+    <div class="w-4/5 mx-auto py-20 ">
+        <div class="sm:grid grid-cols-2 gap-15 mb-7">
+            <div class="m-auto sm:m-auto text-left w-4/5 block">
+                <h2 class="pb-16 text-5xl font-black text-black">
+                    <strong>My Movie List</strong>
+                </h2>
+                <p class="pb-14 text-gray-900 text-xl">
+                    Discover and manage all the movies you want to watch and those you have already seen. Add new movies, specify their release year, mark movies as watched, and remove them from the list. Share your experiences with friends and never forget about the movies you want to watch!
+                </p>
+                <a 
+                    href="{{ route('movies.index') }}"
+                    class="border-2 border-black uppercase bg-light-black text-gray-100 text-xs font-extrabold py-2 px-4 rounded-3xl hover:bg-gray-200 hover:text-black transition duration-300 ease-in-out">
+                    Go to My Movie List
+                </a>
+            </div>
+            <div>
+                <img src="{{ asset('images/my_movie_list.jpg') }}" style="width: 500px; height: 300px; object-fit: cover; margin-top: 8px" alt="My Movie List">
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center p-15 bg-black text-white">
+        <h2 class="text-3xl pb-7 font-semibold text-orange-500"> 
+            Explore the World of Cinema
+        </h2>
+
+        <span class="font-extrabold block text-4xl py-2">
+            Film Reviews
+        </span>
+        <span class="font-extrabold block text-4xl py-2">
+            Movie Analysis
+        </span>
+        <span class="font-extrabold block text-4xl py-2">
+            Behind the Scenes
+        </span>
+        <span class="font-extrabold block text-4xl py-2">
+            Upcoming Releases
+        </span>
+    </div>
+
     <div class="w-4/5 mx-auto py-20 border-b border-gray-200">
+        <h2 class="text-5xl font-extrabold text-center pb-24 pt-3 text-black">
+            What Else You Can Explore
+        </h2>
         <table class="w-full border-2 border-white">
+            <tr class="border border-white">
+                <td class="p-10">
+                    <div class="sm:grid grid-cols-2 gap-15 mb-7">
+                        <div class="m-auto sm:m-auto text-left w-4/5 block">
+                            <h2 class="pb-16 text-4xl font-black text-black">
+                                <strong>Hidden Gems of World Cinema</strong>
+                            </h2>
+                            <p class="pb-14 text-gray-900 text-xl">
+                                Beyond Hollywood lies a treasure trove of cinematic masterpieces from around the globe. Discover films that have captivated audiences worldwide with their unique storytelling and cultural richness.
+                            </p>
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/films6.jpg') }}" style="width: 500px; height: 300px; object-fit: cover; margin-top: 5px" alt="Hidden Gems">
+                        </div>
+                    </div>
+                </td>
+            </tr>
             <tr class="border border-white">
                 <td class="p-10">
                     <div class="sm:grid grid-cols-2 gap-15 mb-7">
@@ -54,23 +171,6 @@
                         </div>
                     </div>
                 </td>
-            <tr class="border border-white">
-                <td class="p-10">
-                    <div class="sm:grid grid-cols-2 gap-15 mb-7">
-                        <div class="m-auto sm:m-auto text-left w-4/5 block">
-                            <h2 class="pb-16 text-4xl font-black text-black">
-                                <strong>Movies That Will Make You Watch Them Twice</strong>
-                            </h2>
-                            <p class="pb-14 text-gray-900 text-xl">
-                                You reach the final scene, the credits roll, and you are left thinking, What just happened? Some films hide their meaning beneath layers of symbolism, clues, and twists that only become clear upon a second viewing. Here is a selection of mind-bending movies that demand to be watched again.
-                            </p>
-                        </div>
-                        <div>
-                            <img src="{{ asset('images/films6.jpg') }}" style="width: 500px; height: 300px; object-fit: cover; margin-top: 8px" alt="Movie 1">
-                        </div>
-                    </div>
-                </td>
-            </tr>
         </table>
         <div class="w-full border-t border-white my-10"></div>
             <div class="text-center mt-10">
@@ -82,7 +182,7 @@
                 <div class="w-full border-t border-white my-10"></div>
                 <p class="text-orange-500 pb-8 text-2xl font-bold">🎥  Where Were Iconic Movie Scenes Filmed?</p>
                 <p class="text-gray-900 text-xl mb-10">These locations became legendary in cinema history. Find out where they exist in real life.</p>
-                <div class="w-full border-t border-white my-10"></div>
+                <div class="w-full border-t border-white my-10 pb-4"></div>
                 <a 
                     href="/blog"
                     class="border-2 border-black uppercase bg-light-black text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl hover:bg-gray-200 hover:text-black">
@@ -93,100 +193,7 @@
     </div>
     </div>
 
-    <div class="text-center p-15 bg-black text-white">
-        <h2 class="text-3xl pb-7 font-semibold text-orange-500"> 
-            Explore the World of Cinema
-        </h2>
 
-        <span class="font-extrabold block text-4xl py-2">
-            Film Reviews
-        </span>
-        <span class="font-extrabold block text-4xl py-2">
-            Movie Analysis
-        </span>
-        <span class="font-extrabold block text-4xl py-2">
-            Behind the Scenes
-        </span>
-        <span class="font-extrabold block text-4xl py-2">
-            Upcoming Releases
-        </span>
-    </div>
 
-    <div class="text-center pt-15 pb-5">
-        <span class="uppercase text-l text-gray-500">
-            Blog
-        </span>
-    
-        <h2 class="text-4xl font-extrabold pt-10 text-black">
-            Recent Posts
-        </h2>
-    
-        <div class="w-4/6 mx-auto pt-3">
-            <div class="w-full border-t border-white my-15"></div>
-            @foreach ($latestPosts as $index => $post)
-                <div class="sm:grid grid-cols-2 gap-10 mb-7">
-                    @if ($index % 2 == 0)
-                        <div class="m-auto sm:m-auto text-left w-5/6 block">
-                            <h3 class="text-3xl pb-8 font-bold">{{ $post->title }}</h3>
-                            <p class="text-gray-800 pb-8 text-lg">{{ Str::limit($post->description, 500, '...') }}</p>
-                            <a
-                            href="/blog/{{ $post->slug }}" 
-                            class="border-2 border-black uppercase bg-light-black text-gray-100 text-xs font-extrabold py-2 px-4 rounded-3xl hover:bg-gray-200 hover:text-black transition duration-300 ease-in-out">
-                            Read More
-                            </a>
-                        </div>
-                        <div class="flex content-center">
-                            <img src="{{ asset('images/' . $post->image_path) }}" style="height: auto; object-fit: contain;" alt="{{ $post->title }}">
-                        </div>
-                    @else
-                        <div>
-                            <img src="{{ asset('images/' . $post->image_path) }}" width="300" alt="{{ $post->title }}">
-                        </div>
-                        <div class="m-auto sm:m-auto text-left w-4/5 block">
-                            <h3 class="text-3xl pb-8 font-bold">{{ $post->title }}</h3>
-                            <p class="text-gray-800 pb-8 text-lg">{{ Str::limit($post->description, 500, '...') }}</p>
-                            <a
-                            href="/blog/{{ $post->slug }}" 
-                            class="border-2 border-black uppercase bg-light-black text-gray-100 text-xs font-extrabold py-2 px-4 rounded-3xl hover:bg-gray-200 hover:text-black transition duration-300 ease-in-out">
-                            Read More
-                            </a>
-                        </div>
-                    @endif
-                </div>
-                <div class="w-full border-t border-white my-15"></div>
-            @endforeach
-        </div>
-    </div>
-    </div>
-
-    <div class="text-center pt-3 pb-12">
-        <a 
-            href="/blog"
-            class="border-2 border-black uppercase bg-light-black text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl hover:bg-gray-200 hover:text-black">
-            Find Out More
-        </a>
-    </div>
-
-    <div class="w-full border-t border-white my-10 mx-auto" style="width: 80%;"></div>
-
-    <div class="w-4/5 mx-auto py-20 ">
-        <div class="sm:grid grid-cols-2 gap-15 mb-7">
-            <div class="m-auto sm:m-auto text-left w-4/5 block">
-                <h2 class="pb-16 text-5xl font-black text-black">
-                    <strong>My Movie List</strong>
-                </h2>
-                <p class="pb-14 text-gray-900 text-xl">
-                    Discover and manage all the movies you want to watch and those you have already seen. Add new movies, specify their release year, mark movies as watched, and remove them from the list. Share your experiences with friends and never forget about the movies you want to watch!
-                </p>
-                <a 
-                    href="{{ route('movies.index') }}"
-                    class="border-2 border-black uppercase bg-light-black text-gray-100 text-xs font-extrabold py-2 px-4 rounded-3xl hover:bg-gray-200 hover:text-black transition duration-300 ease-in-out">
-                    Go to My Movie List
-                </a>
-            </div>
-            <div>
-                <img src="{{ asset('images/my_movie_list.jpg') }}" style="width: 500px; height: 300px; object-fit: cover; margin-top: 8px" alt="My Movie List">
-            </div>
-        </div>
-    </div>
+   
 @endsection

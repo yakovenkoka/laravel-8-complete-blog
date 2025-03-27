@@ -40,9 +40,10 @@
                         @if (Route::has('register'))
                             <a class="no-underline text-lg font-semibold hover:text-orange-400 hover:scale-105 transition-transform duration-300 {{ request()->is('register') ? 'text-orange-400' : '' }}" href="{{ route('register') }}">{{ __('Register') }}</a>
                         @endif
-                    @else
-                        <span class="no-underline text-lg font-semibold cursor-default ">{{ Auth::user()->name }}</span>
-
+                        @else
+                        <a href="{{ route('user.posts', Auth::user()->id) }}" class="no-underline text-lg font-semibold hover:text-orange-400 hover:scale-105 transition-transform duration-300">
+                            {{ Auth::user()->name }}
+                        </a>
                         <a href="{{ route('logout') }}"
                            class="no-underline text-lg font-semibold hover:text-orange-400 hover:scale-105 transition-transform duration-300"
                            onclick="event.preventDefault();

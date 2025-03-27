@@ -135,5 +135,13 @@ class PostsController extends Controller
     $latestPosts = Post::latest()->take(5)->get();
     return view('layouts.footer', compact('latestPosts'));
 }
+
+public function userPosts($id)
+{
+    $user = \App\Models\User::findOrFail($id);
+    $posts = $user->post()->orderBy('created_at', 'desc')->get();
+
+    return view('blog.user_posts', compact('user', 'posts'));
+}
 }
 

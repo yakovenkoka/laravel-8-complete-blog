@@ -27,27 +27,27 @@
     </div>
 @endif
 
-@foreach ($posts as $post)
-    <div class="sm:grid grid-cols-2 gap-12 w-5/6 mx-auto py-15 border-b border-gray-700">
+@foreach ($posts as $index => $post)
+    <div class="sm:grid grid-cols-2 gap-12 w-5/6 mx-auto py-15 border-b border-gray-700 ">
         <div class="pl-5">
             <img src="{{ asset('images/' . $post->image_path) }}" style="width: 520px; height: 305px; object-fit: cover; margin-top:0.6em;" alt="">
         </div>
         <div>
-            <h2 class="text-gray-900 font-bold text-3xlxl pb-4 w-6/10">
+            <h2 class="text-black font-bold text-3xlxl pb-4 w-6/10">
                 {{ $post->title }}
             </h2>
 
-            <span class="text-gray-500">
-                By <span class="font-bold italic text-gray-800">{{ $post->user->name }}</span>, Created on {{ date('jS M Y', strtotime($post->updated_at)) }}
+            <span class="text-gray-700">
+                By <span class="font-bold italic text-gray-900">{{ $post->user->name }}</span>, Created on {{ date('jS M Y', strtotime($post->updated_at)) }}
             </span>
 
-            <p class="text-xl text-gray-700 pt-8 pb-10 leading-8 font-light">
-                {{ Str::limit($post->description, 800) }}
+            <p class="text-xl font-normal text-gray-900 pt-8 pb-10 leading-8 font-light">
+                {{ Str::limit($post->description, 600) }}
             </p>
 
             <div class="flex items-center">
                 <a href="/blog/{{ $post->slug }}" class="border-2 border-black uppercase bg-light-black text-gray-100 text-s font-extrabold py-2 px-4 rounded-3xl hover:bg-gray-200 hover:text-black">
-                    Keep Reading
+                    Read More
                 </a>
                 <a href="/blog/{{ $post->slug }}#comments" class="ml-6 text-black hover:text-gray-700">
                     <i class="fas fa-comments fa-lg"></i>
