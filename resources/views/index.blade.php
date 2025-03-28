@@ -11,7 +11,7 @@
                     Your Movie Adventure Starts Here
                 </h1>
                 <a 
-                href="/about-us"
+                href="/about"
                 class="text-center border-2 border-white text-white py-2 px-8  font-bold text-xl uppercase hover:bg-black hover:text-white hover:border-black rounded-lg transition duration-300 ease-in-out">
                 Discover More
             </a>
